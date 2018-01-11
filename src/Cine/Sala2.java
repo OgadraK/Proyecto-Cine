@@ -10,13 +10,13 @@ import javax.swing.JLabel;
 
 public class Sala2 extends Salas implements ActionListener
 {
-	public static boolean MaÃ±anaSala2;
+	public static boolean MañanaSala2;
 	public Sala2()
-	{ 
+	{
 		Ventana.sala2Open=true;
-		if (Ventana.maÃ±ana==true)	{MaÃ±anaSala2=true;}		else {MaÃ±anaSala2=false;}
+		if (Ventana.mañana==true)	{MañanaSala2=true;}		else {MañanaSala2=false;}
 		
-		JFrame frame_sala2			=	new JFrame	("Programa de gestiÃ³n de salas de cine - Sala 2");
+		JFrame frame_sala2			=	new JFrame	("Programa de gestión de salas de cine - Sala 2");
 		frame_sala2.setBounds			(250, 20, 995, 785);			frame_sala2.getContentPane().setBackground(Color.black);
 		frame_sala2.setContentPane		(new JLabel		(new ImageIcon("Imagenes/fondo2.jpg")));
 		frame_sala2.setContentPane		(new JLabel		(new ImageIcon("Imagenes/fondo2.jpg")));
@@ -55,7 +55,7 @@ public class Sala2 extends Salas implements ActionListener
 		marco_ocupacion.add							(etiqueta_ocupacion);
 		frame_sala2.add								(marco_ocupacion);
 
-/*	//Barra del progreso de la ocupaciÃ³n
+/*	//Barra del progreso de la ocupación
 		Salas.Barra_Ocupacion();
 		frame_sala2.add(BarradeOcupacion);
 	*/	
@@ -129,9 +129,9 @@ public class Sala2 extends Salas implements ActionListener
 		if (e.getSource()==boton_proponer)
 		{
 			if (numero_introducido>620 || numero_introducido<1)
-				{	etiqueta_mensajes.setText("Â¡Valor errÃ³neo!");	}
+				{	etiqueta_mensajes.setText("¡Valor erróneo!");	}
 			else if (numero_introducido>contador_asientos_sala2)
-				{	etiqueta_mensajes.setText("Â¡No hay suficientes asientos!");	}
+				{	etiqueta_mensajes.setText("¡No hay suficientes asientos!");	}
 			else
 			{
 				int contar_personas=1;
@@ -154,9 +154,9 @@ public class Sala2 extends Salas implements ActionListener
 		if (e.getSource()==boton_confirmar)
 		{	
 			if (numero_introducido>620 || numero_introducido<1)
-				{	etiqueta_mensajes.setText("Â¡Valor errÃ³neo!");	}
+				{	etiqueta_mensajes.setText("¡Valor erróneo!");	}
 			else if (numero_introducido>contador_asientos_sala2)
-				{	etiqueta_mensajes.setText("Â¡No hay suficientes asientos!");	}
+				{	etiqueta_mensajes.setText("¡No hay suficientes asientos!");	}
 			else
 			{
 				for (int rec_filas=1;rec_filas<25;rec_filas++)
