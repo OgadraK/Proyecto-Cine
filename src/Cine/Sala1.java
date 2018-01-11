@@ -1,6 +1,5 @@
 package Cine;
 
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
@@ -10,14 +9,14 @@ import javax.swing.JLabel;
 
 public class Sala1 extends Salas implements ActionListener 
 {
-	public static boolean MañanaSala1;
+	public static boolean MaÃ±anaSala1;
 	
 	public Sala1() 
 	{
 		Ventana.sala1Open=true;
-		if (Ventana.mañana==true)	{MañanaSala1=true;}		else {MañanaSala1=false;}
+		if (Ventana.maÃ±ana==true)	{MaÃ±anaSala1=true;}		else {MaÃ±anaSala1=false;}
 		
-		JFrame frame_sala1			=	new JFrame	("Programa de gestión de salas de cine - Sala 1");
+		JFrame frame_sala1			= new JFrame ("Programa de gestiÃ³n de salas de cine - Sala 1");
 		frame_sala1.setBounds			(250, 20, 900, 715);
 		frame_sala1.setIconImage		(new ImageIcon	("Imagenes/icono_sala1.png").getImage());
 		frame_sala1.setContentPane		(new JLabel		(new ImageIcon("Imagenes/fondo1.jpg")));
@@ -37,7 +36,7 @@ public class Sala1 extends Salas implements ActionListener
 		boton_confirmar.addActionListener	(this);
 		boton_cancelar.addActionListener	(this);
 		boton_imprimir.addActionListener	(this);
-		frame_sala1.add						(marco_asignar_asiento);
+		frame_sala1.add				(marco_asignar_asiento);
 		
 	//enumeracion asientos
 		imagen_filas1			=	new ImageIcon	("Imagenes/enumeracion_filas1.png");
@@ -56,7 +55,7 @@ public class Sala1 extends Salas implements ActionListener
 		marco_ocupacion.add							(etiqueta_ocupacion);
 		frame_sala1.add								(marco_ocupacion);
 	
-/*	//Barra del progreso de la ocupación
+/*	//Barra del progreso de la ocupaciÃ³n
 		Salas.Barra_Ocupacion();
 		frame_sala1.add(BarradeOcupacion);
 	*/
@@ -131,9 +130,9 @@ public class Sala1 extends Salas implements ActionListener
 		if (e.getSource()==boton_proponer)
 		{
 			if (numero_introducido>420 || numero_introducido<1)
-				{	etiqueta_mensajes.setText("¡Valor erróneo!");	}
+				{	etiqueta_mensajes.setText("Â¡Valor errÃ³neo!");	}
 			else if (numero_introducido>contador_asientos_sala1)
-				{	etiqueta_mensajes.setText("¡No hay suficientes asientos!");	}
+				{	etiqueta_mensajes.setText("Â¡No hay suficientes asientos!");	}
 			else
 			{
 				int contar_personas=1;
@@ -156,9 +155,9 @@ public class Sala1 extends Salas implements ActionListener
 		if (e.getSource()==boton_confirmar)
 		{	
 			if (numero_introducido>420 || numero_introducido<1)
-				{	etiqueta_mensajes.setText("¡Valor erróneo!");	}
+				{	etiqueta_mensajes.setText("Â¡Valor errÃ³neo!");	}
 			else if (numero_introducido>contador_asientos_sala1)
-				{	etiqueta_mensajes.setText("¡No hay suficientes asientos!");	}
+				{	etiqueta_mensajes.setText("Â¡No hay suficientes asientos!");	}
 			else
 			{
 				for (int rec_filas=1;rec_filas<20;rec_filas++)
